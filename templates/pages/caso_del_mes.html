@@ -1,0 +1,11 @@
+{% extends 'pages/estatutos/estatuto_antiguo.html' %}
+{% load staticfiles %}
+{% if documento %}
+{% block title %}{{ documento.titulo }}{% endblock title %}
+{% block h %}{{ documento.titulo }}{% endblock h %}
+{% block file %}
+<embed src="{{ documento.documento.url }}" style="width: 100%; height: 900px; margin-bottom: 40px;">
+{% endblock file %}
+{% else %}
+<h1>No existen registros</h1>
+{% endif %}
