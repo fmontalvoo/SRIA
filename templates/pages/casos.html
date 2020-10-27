@@ -1,5 +1,5 @@
 {% extends 'index.html' %}
-{% load staticfiles %}
+{% load static %}
 {% block title %}SRIA - Actividades Cientificas{% endblock title %}
 {% block section#1 %}{% endblock section#1 %}
 {% block section#2 %}{% endblock section#2 %}
@@ -17,13 +17,13 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <div class="the-news-wrap">
                                 <figure class="post-thumbnail">
-                                    <a href="{% url 'inicio:caso' documento.id %}">
+                                    <a href="{{documento.documento.url}}" target="_blank">
                                         <img src="{% static 'img/document.png' %}" height="170" width="40" style="width: auto;" alt="">
                                     </a>
                                 </figure>
 
                                 <header class="entry-header">
-                                    <a href="{% url 'inicio:caso' documento.id %}">
+                                    <a href="{{documento.documento.url}}" target="_blank">
                                         <h3>{{ documento.titulo }}</h3>
                                     </a>
 
